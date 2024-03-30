@@ -1,20 +1,21 @@
 //APP DE FIBONACCI
 //1 1 2 3 5 8 13 21 34...
+const serie = require('./serie');
 
-const fs = require('fs');
 
-let fibo1 = 1;
-let fibo2 = 1;
-let serie = '';
 
-serie += `${fibo1}\n`
-for (let i = 2; i <= 8; i++) {
-    serie += `${fibo2}\n`
-    fibo2 = fibo1 + fibo2;
-    fibo1 = fibo2 -fibo1;
-}
-//CAMBIOS IMPORTANTES EN EL CODIGO
-fs.writeFile('fibonacci.txt', serie, (err) => {
-  if (err) throw err;
-  console.log('El archvo fue creado con exito');
-});
+//NOS MUESTRA DOS ELEMENTOS, ARCHIVOS Y LA RUTA
+let argv = process.argv;
+let valor = argv[2].split('=')[1];
+console.log(valor);
+
+//SE MANEJA COMO UNA PROMESA LO QUE RECIBE
+//SE LLAMA EL METODO crearSerie Y SE LE PONEN LAS CONDICIONES
+//EN CASO DE QUE FALLE EL CODIGO "entrará al catch" EN CASO 
+//DE QUE FUNCIONE "entrará al then"
+
+let cantidad = valor;
+
+serie.crearSerie(cantidad)
+    .then(mensaje => console.log(mensaje))
+    .catch(mensaje => console.log(mensaje))
