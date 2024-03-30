@@ -13,7 +13,7 @@ for (let i = 2; i <= 8; i++) {
     fibo2 = fibo1 + fibo2;
     fibo1 = fibo2 -fibo1;
 }
-
+//CAMBIOS IMPORTANTES EN EL CODIGO
 fs.writeFile('fibonacci.txt', serie, (err) => {
   if (err) throw err;
   console.log('El archvo fue creado con exito');
