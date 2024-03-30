@@ -1,0 +1,12 @@
+- ¿Que es NPM?
+NODE PACKAGE MANAGER (ADMINISTRADOR DE PAQUETES DE NODE)
+Es un programa que permite administrar los paquetes de node que se pueden
+instalar de manera local o global como dependencias de si 
+- Dependencias 
+¿Que es el Package.json?
+Es un archivo que se crea al crear un proyecto de node
+- Control de recursos
+- Dependencias Dev
+- Versionado de paquetes 
+- Actualizacion de paquetes
+- Desinstalacion de paquetes

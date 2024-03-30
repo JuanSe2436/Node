@@ -1,0 +1,23 @@
+{
+  "name": "04-npm-demo",
+  "version": "1.0.0",
+  "description": "Proyecto demo de NPM",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JuanSe2436/Node.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JuanSe2436/Node/issues"
+  },
+  "homepage": "https://github.com/JuanSe2436/Node#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "i": "^0.3.7"
+  }
+}
