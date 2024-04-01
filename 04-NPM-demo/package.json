@@ -18,6 +18,7 @@
   "homepage": "https://github.com/JuanSe2436/Node#readme",
   "dependencies": {
     "colors": "^1.4.0",
-    "i": "^0.3.7"
+    "i": "^0.3.7",
+    "mongoose": "^8.2.4"
   }
 }

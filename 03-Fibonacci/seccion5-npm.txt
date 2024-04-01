@@ -6,6 +6,7 @@ instalar de manera local o global como dependencias de si
 ¿Que es el Package.json?
 Es un archivo que se crea al crear un proyecto de node
 - Control de recursos
+Formas de utilizar un paquete
 - Dependencias Dev
 - Versionado de paquetes 
 - Actualizacion de paquetes
