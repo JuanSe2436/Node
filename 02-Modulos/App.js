@@ -74,6 +74,10 @@ const server = http.createServer((req, res) => {
     }
 });
 
+server.on('connection', (puerto) => {
+    console.log('Nueva conexion...')
+})
+
 server.listen(3000);
 
 console.log('Servidor escuchadno en el puerto 3000....')
