@@ -9,10 +9,11 @@ app.get('/', (req, res) => {
 app.get('/api/usuarios', (req, res) => {
     res.send(['sebas', 'luis', 'ana'])
 });
-
-app.listen(3000, () => {
-    console.log('Escuchando en el puerto 3000...');
-});
+//VARIABLES DE ENTORNO PARA EL PUERTO
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+    console.log(`Escuchando en el puerto ${port}...`);
+})
 // app.post(); //ENVIO DE DEATOS
 // app.put();  //ACTUALIZACION
 // app.delete(); //ELIMINACION
