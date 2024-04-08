@@ -1,0 +1,3 @@
+las variables son muy importantes para el uso del servidor
+tenemos que tener en cuenta las rutas que se asignan para saber como enviar la informacion de manera 
+correcta
