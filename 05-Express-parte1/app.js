@@ -29,7 +29,8 @@ app.get('/api/usuarios/:id', (req, res) => {
 app.post('/api/usuarios/', (req, res) => {
     if (!req.body.nombre) {
         //400 bad request
-        res.status(400)
+        res.status(400).send('Debe ingresar un nombre')
+        return;
     }
     const usuario = {
         id: usuarios.length + 1,
