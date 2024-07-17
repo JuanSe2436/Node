@@ -29,7 +29,8 @@ app.get('/api/usuarios/:id', (req, res) => {
 app.post('/api/usuarios/', (req, res) => {
     if (!req.body.nombre) {
         //400 bad request
-        res.status(400)
+        res.status(400).send('Debe ingresar un nombre para validar')
+        return;
     }
     const usuario = {
         id: usuarios.length + 1,
@@ -45,6 +46,18 @@ const port = process.env.PORT || 3000;
 app.listen(port, () => {
     console.log(`Escuchando en el puerto ${port}...`);
 })
+
+function existeUsuario(id) {
+  return usuarios.find((u) => u.id === parseInt(id));
+}
+
+function validarUsuario(nom) {
+  const schema = Joi.object({
+    nombre: Joi.string().min(3).required(),
+  });
+  return schema.validate({ nombre: nom });
+}
+
 // app.post(); //ENVIO DE DEATOS
 // app.put();  //ACTUALIZACION
 // app.delete(); //ELIMINACION
