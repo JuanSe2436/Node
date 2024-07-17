@@ -46,6 +46,18 @@ const port = process.env.PORT || 3000;
 app.listen(port, () => {
     console.log(`Escuchando en el puerto ${port}...`);
 })
+
+function existeUsuario(id) {
+  return usuarios.find((u) => u.id === parseInt(id));
+}
+
+function validarUsuario(nom) {
+  const schema = Joi.object({
+    nombre: Joi.string().min(3).required(),
+  });
+  return schema.validate({ nombre: nom });
+}
+
 // app.post(); //ENVIO DE DEATOS
 // app.put();  //ACTUALIZACION
 // app.delete(); //ELIMINACION
